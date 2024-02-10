@@ -1,0 +1,238 @@
+@font-face {
+  font-family: MyFont;
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+:root {
+  /* Primary color */
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+
+  /* gradient color */
+
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+}
+
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: MyFont;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  height: auto;
+  gap: 20px;
+  background-color: white;
+  padding-bottom: 20px;
+}
+
+.container .left {
+  text-align: center;
+  background-color: var(--Light-royal-blue);
+  width: 70%;
+  padding-bottom: 50px;
+  border-radius: 30px;
+  color: white;
+}
+.container .left h4 {
+  font-size: 1.5rem;
+}
+.container .left .left-score {
+  width: 170px;
+  height: 170px;
+  background: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+  border-radius: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+}
+.container .left .big-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 65px;
+  font-weight: bolder;
+  height: 100%;
+}
+.container .left .small-text {
+  font-size: 18px;
+  margin-top: -55px;
+  font-weight: bold;
+  color: var(--Light-slate-blue);
+}
+.container .left h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.container .left .text {
+  font-size: 18px;
+  margin: 0 40px;
+  margin-top: -15px;
+  color: rgb(177, 177, 177);
+}
+.container .right {
+  width: 50%;
+  padding-right: 20px;
+  margin-left: 20px;
+  padding-bottom: 20px;
+}
+
+.container .right h4 {
+  font-size: 25px;
+  color: var(--Light-slate-blue);
+}
+
+.container .right .score-card {
+}
+
+.container .right .reaction,
+.memory,
+.verbal,
+.visual {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 95%);
+  margin-bottom: 20px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.container .right .reaction {
+  background-color: hsl(0, 33%, 92%);
+}
+.container .right .memory {
+  background-color: hsl(38, 50%, 91%);
+}
+.container .right .verbal {
+  background-color: hsl(166, 64%, 92%);
+}
+.container .right .visual {
+  background-color: hsl(243, 43%, 90%);
+}
+
+.container .reaction-left,
+.memory-left,
+.verbal-left,
+.visual-left {
+  display: flex;
+  align-items: center;
+}
+
+.container .reaction-left {
+  color: var(--Light-red);
+  font-weight: bold;
+}
+.container .memory-left {
+  color: var(--Orangey-yellow);
+  font-weight: bold;
+}
+.container .verbal-left {
+  color: var(--Green-teal);
+  font-weight: bold;
+}
+.container .visual-left {
+  color: var(--Light-royal-blue);
+  font-weight: bold;
+}
+
+.reaction-left img,
+.memory-left img,
+.verbal-left img,
+.visual-left img {
+  margin-right: 5px;
+  width: 12px;
+}
+
+.container .right .number {
+  display: flex;
+  justify-content: flex-end;
+}
+.container .right .number .bold {
+  font-weight: bold;
+}
+.container .right .number .grey {
+}
+
+button {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: var(--Light-slate-blue);
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .left {
+    width: 100%;
+    margin-top: -25px;
+  }
+
+  .container .left h4 {
+    padding-top: 20px;
+    font-size: 20px;
+    color: rgb(199, 199, 199);
+  }
+
+  .container .left .big-text {
+    font-size: 50px;
+  }
+  .container .left .small-text {
+    padding-top: 20px;
+    font-size: 12px;
+  }
+
+  .container .left h3 {
+    font-size: 25px;
+  }
+  .container .left p {
+    font-size: 10px;
+  }
+  .container .left .left-score {
+    width: 120px;
+    height: 120px;
+  }
+
+  .container .right {
+    width: 100%;
+  }
+}
